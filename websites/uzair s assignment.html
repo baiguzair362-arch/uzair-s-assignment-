@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: aqua;
+      display: flex;
+      justify-content: center;
+      margin-top: 15%;
+    }
+
+    .parent {
+      width: 50vw;
+      height: 50vh;
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      transition: all 0.3s ease;
+    }
+
+    .child1 {
+      width: 170px;
+      height: 155px;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    p {
+      font-weight: bolder;
+    }
+
+    input {
+      width: 70px;
+      height: 8px;
+    }
+
+    .child2 {
+      width: 170px;
+      height: 155px;
+    }
+
+    .input2 {
+      margin-top: 70px;
+      margin-left: 88px;
+    }
+
+    .input3 {
+      margin-left: 88px;
+    }
+
+    button {
+      margin-left: 125px;
+      margin-top: 35px;
+      background-color: blue;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    /* 📱 Responsive Part */
+    @media screen and (max-width: 600px) {
+      body {
+        margin-top: 5%;
+      }
+
+      .parent {
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+        height: auto;
+      }
+
+      .child1,
+      .child2 {
+        width: 100%;
+        height: auto;
+        text-align: center;
+      }
+
+      .input2,
+      .input3,
+      button {
+        margin: 10px auto;
+        display: block;
+      }
+
+      input {
+        width: 80%;
+        height: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="parent">
+      <div class="child1">
+        <img src=data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAvQMBEQACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAQYEBQcCA//EAD0QAAICAQIDAwcJCAIDAAAAAAABAgMEBREGITESQVETIkJVYXHRBxQVMmJykZPBFiNDU4GSobE1cyQzUv/EABsBAQACAwEBAAAAAAAAAAAAAAAEBQECAwYH/8QAKxEBAAIBAwMEAgEEAwAAAAAAAAECAwQRIQUSMRMUQVEyYTMiI0JxFYGh/9oADAMBAAIRAxEAPwDuCAkAAAAAAAABG6AncCNwG6AbgN14gSAAAAAAAAAAQgJAAAAAABG4Hwy8zGw6ZXZV0Kq11lOSSMTaI8tsdLZJ2pG8qnqPH+DU3HAqnkNdJPzYsi31dY4hbYOjZr834V7J461m2T8i6KI/Zh2n+LOE6u8+Fnj6Jp4/LeWDLirXZPd6lavdGK/Q5zqMk/KTHStLH+L3TxdrtL5Zzn7LK4vczGpyR8tbdJ0tvhtcH5QM6vZZ2NVcvGvzWda6y3yh5ehY5/jnZadK4w0jUJRr8v5C5+hb5u/ufQk0z0v8qjP03UYeZjeFgUk+ae6O6A9AAAAAAAAAIQEgAAAAB5bArPE/FmPpClj4/ZvzNvq78ofe+BHzZ4pxHlZaHpt9TO88Vc21LUsvU7/LZtztkvqp/Vj7l3FbfJa88vVYNLj09dqQxOfezVJ3DDAAAAOvJ80x87iwcP8AFWfpMo1zcsjF6OuT3a+6/wBCTi1FqztPhU63pmLNWbU4l1bFu+cU12qE4KcVJRmtmveizid4eStHbOz7GWAAAAAAAEICQAAABDfICo8acTfRcfmWFLfMsXOS/hLx95Fz5+yO2PK16b073M99/wAY/wDXM2225Ntyb3cm92/6lZ+3rYiIiIjxCA2AJAgG0gACeRkmdomfp0HgvhTyPk9R1OH73rTTJfU9r9pYafB2/wBVnl+qdT9X+zj8R5/a8pd5MUaQAAAAAAAIQEgAAEMxsNXxFqsNH0u7Kls5pdmuLe28n0OeXJXHXeZSNLgnPlikOOZF9mVkWZF8nK22TlKT72VEzNp3e4xY646RSscPmYdAD6UU25N0aceudtsnyhBbtma1tadoaZMlcde687QtmmcA5t6U9QvhjJ/w4LtS29r6ImU0dp5tKkz9bpXjHG7eV8AaXGO07ciT8e1sdvaY/lX26zqZnh8cr5PcKcX81yrq5d3a2kjWdHT4l0x9bzRP9UbqtrPCmqaVCVrrWRjr+LSm9vfHqiNk09qLbTdVwZ+Jnaf2snBnCnk/J6jqdfn9aqZL6vtftJGnwdv9VlX1LqXqf2sc8ff2vKSRNUb0AAAAAAAAAhASAAAQzAq3ElsMnJ+byip11ro1umzyXWtXac/p1nwttDTsr3/asZOg4l3OrtUyfTs9CDj6hkp55XFNXkr55ajK0LMp51pXR+xyf4Fhi6hiv54S8esx288MfT9MytQzq8Kmqaum+faWyiu9ssMMerxWd22bVYsWP1Jnh1jh/QsTRcdV0wUrmv3lzXOT+Bb48UUh47VavJqb91pbdJeB1RTYBsgGy8ACSXRASAAAAAAAAAAQgJAAAPnbJQjKT9Fbml7dtZszEbzspVtjtsnY/SbZ87z5PUy2tPy9Bjr20iHg5NzomJFl0HDVNPl5peVsXXbnse06PpZw4e63mVNq83fftjxDbbIuEQQEgAAAAAAAQ2BIAAAAAQgJAAAMTVJdjAvl9hoh6+3bp7S6YY3yQpyPn70AB6ri52RgusmkdMVe/JFf21yTtWZXeuCrjGC6RWyPouOsVrEPPTO87vZuwAVjj/JvxdHrsxrp0z8tFdqD2e3Mk6WsWybTDjnmYrw579M6r6xyfzWWPoY/pD77fZ9Nar6xyfzWPb4/o77fZ9Nar6xyfzWPb4/o77fZ9Nar6xyfzWPb4/o77fZ9Nar6xyfzWPb4/o77fZ9M6r6xyfzWPQx/RN7fba8Lavnz4gwq8jMvsrnPsuM5tp7o46jDSMczEOuG9u7mXU10KtNSAAAAIQEgAAGDrP8Axt/3SB1KN9NZ2wfywqJ4H4XwZH1xeWVS3/Mj/skaSds1f9ueb+Oy7LqfQ48PPpMgBU/lJ/4Kv/vj/pkrR/yuGo/BzQtkEAAAAADacLLfiLT9v5y/0zhqP4pdMX5w7GUyxAAAABCAkAAAx8+HlMS6C74Mj6uvfhtH6b452vEqWfO9tuHoIneAMp32e+/Q2rM1ndi0bxtK6YlyvorsXpR3Z9D02SMuKtoefvXttMPud2gBXeONPytS0iFGFS7bFbGXZTS5c/EkaW9aZN7OWas2rtCifsnrvq+f98fiWPucX2iejf6P2T131fP++PxHucX2ejf6P2T131fP++PxMe6xfZ6N/pgajpuZplkK86nyU5reMXJPdf0Z1pkrf8WlqzXyxDdqAb7geh38SYz25VKVn4Lb9SLq52xS7YPzdYXQqU9IAAAAhASAAAeZLfl3GLRvGwpmdS8fLtq222lyXsfQ+fa7F6Oe1ZX2C/djiWLddXTFytnGMV3t7HLHivknasbmTPTFHdknZpczXk944Ud/tzX6Fxp+kfOR57Vddj8cDc8CcQyV8tPz7G/KtypnJ9/fE9Hpe3HXshX6XW2yWmMk8yvyZMWb0BDAbGNoDYcDHy8qrDxrMjImoV1xcpNs2rWbT2wxM7RvLkGt6lZq2o25dicYy+pF+jHuLnDjjHXaFfkv3W3YB2cwC9fJnhb/ADvPkvN3VUH497/QrtdfmKwl6aPlfEQEpIAAAAhASAAAQ+oFV45V+NirOxq1Jx82xv0V3Mqdf06ue8ZZYya3Jp8U9jnF99183K6yU37eiMY8WPHG1IeczanLnnuyS+b5nVx2ItxacW01ts9+gjjmGd/mF64Z41goQxNZn2ZLlHI7n974knHmieJWum10THbdd6boXVqdU4zg+kovdElZxMTG8PoGUN8wMDU9YwtLqdmbfGvwj1lL3LqazaK+XLJmpjje0ua8S8R5GuWKKTpxYc41f/T8WTNBlxzbb5V86uMs7NFt09ha/wDR4SZHqqqy62FVUXKyclGK8WzW0xEbyzEbzs7JoWnQ0vS8fEj1rj5z8ZPm3+JSZL995lY0r212bE0bgAAAAhASAAAAPhlY9eVRZRdFSrsi4yT70zE+Gto7omJch1/SLtGz5Y9q3re8qp90o/Eg3p2y89qME4r7fEtcaOAAMbDKwtSzcB/+Jk21eyMuX4G9bzDpTNen4y21fGeuQjs8ip+2VS3Onr2SY12WHxyeK9byItSzVCL/AJUFExOa0tba3LbjfZp7rJ3zdl1krJv0pvdnPeZndGm1rTvMvArM1neGsTtO4eg0etjLXtt5TsOWLcSFi7rzwDw/LtLVsuOy22x4v/MvgV2szf4VS8GOfMr6uhASkgAAAABCAkAAAARsgNbrekY2sYcsfJWz6wsS5xfijW1ItHLjmw1y17bOU6tpWXpGU6MyHP0bI/VmvFMg2pNZ5UObBfFO0+GEaOIZAAAAAAIM1tas7wzEzE8LXwlwpZnzhm6jFwxFzjBrnZ8EXVdde2LaY5XGlx2vHdZ0muMYxUYxSilsku5EZYQ9hkAAAAACEBIAAAAAAMTUMDG1DHlj5dSsra7+73eBrNYt5aZMdckbWUDWuCMvFcrdNbyad/8A1ye04/Ej3wbeFTn0Fq805hVbq50WOu6Eq5r0ZrZo4TExwgWras7S8mrWQzsQBjeEA/2zdO0vO1KajhY87ftbbRXvfQ2rS1uHbHgyZJ2rC88P8FUYco5GpTWRcuagl5kX+pKph28rXBoa4+b+Vvikklt0Oyw2egAAAAAAAIQEgAAAAAAAQwMXN07Ezo9nLxq7V9qO7MTWJ8tL4638w0WVwPpF0t6420P7EuX+TnOGkot9Bht4YMvk8xW/N1DIS+7F/oae3q4/8bX7e6fk+wov97mZFi8Eor9B7eravTqR5ltcLhLR8TZrEVsl32tyOlcVYd6aTDT43bquuNUVGuCjFdFFbI6cQkxG3EPoGQAAAAAAAABCAkAAAAAAAAAAAAAAAAAAAAAAAAAAIQEgAAAAAAAAAAAAAAAAAAAAAAAAABCAkAAAAAAAAAAAAAAAAAAAAAAAAAAP/9k= alt="">
+        <p>create your google account</p>
+        <input type="text" placeholder="search">
+      </div>
+      <div class="child2">
+        <input class="input2" type="text" placeholder="name">
+        <input class="input3" type="password" placeholder="password">
+        <button>next</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
